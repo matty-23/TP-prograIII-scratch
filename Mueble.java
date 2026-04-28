@@ -5,14 +5,16 @@ public abstract class Mueble {
     private String color;
     private int altura;
     private int ancho;
+    public Madera material;
 
-    public Mueble(String nombre, String marca, int codigo, String color, int altura, int ancho){
+    public Mueble(String nombre, String marca, int codigo, String color, int altura, int ancho,Madera madera){
         this.nombre = nombre;
         this.marca = marca;
         this.codigo = codigo;
         this.color = color;
         this.altura = altura;
         this.ancho = ancho;
+        this.material=madera;
     }
 
     public String getNombre() {
@@ -31,6 +33,10 @@ public abstract class Mueble {
         return color;
     }
 
+    public Madera getMadera(){
+        return material;
+    }
+
    public void setNombre(String nombre) {
         this.nombre=nombre;
     }
@@ -45,6 +51,10 @@ public abstract class Mueble {
 
     public void setColor(String color) {
         this.color=color;
+    }
+
+    public void setMadera(Madera madera){
+        this.material = madera;
     }
 
 
