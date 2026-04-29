@@ -1,10 +1,11 @@
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class Roble implements Madera {
 
     private String tipoMadera;
     private int vidaUtil;
-    private int diaDesdeQueSeCreo;
+    private LocalDate diaDesdeQueSeCreo;
 
     public Roble(String tipoMadera, int vidaUtil) {
         this.tipoMadera = tipoMadera;
@@ -14,6 +15,7 @@ public class Roble implements Madera {
 
     @Override
     public int tiempoRestante() {
-        return this.diaDesdeQueSeCreo + vidaUtil - LocalDate.now();
+        long diasPasados = ChronoUnit.DAYS.between(diaDesdeQueSeCreo, LocalDate.now());
+        return (int)(vidaUtil - diasPasados);
     }
 }

@@ -15,7 +15,7 @@ public class Mesa extends Mueble{
     }
 
     public void MostrarAtributos(){
-        System.out.println("La mesa pertenece a " + {this.marca} + ", su color es "+ {this.color} +" y tiene " + {this.cantidadPatas}+ "patas." );
-        System.out.println("El tiempo de vida util que le queda a la mesa es " + {madera.tiempoRestante()});
+        System.out.println("La mesa pertenece a " + getMarca()+ ", su color es "+ getColor() +" y tiene " + getcantidadPatas()+ "patas." );
+        System.out.println("El tiempo de vida util que le queda a la mesa es " + getMadera().tiempoRestante());
 }
 }
